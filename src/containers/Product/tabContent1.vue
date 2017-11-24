@@ -107,9 +107,9 @@ export default {
       padding:0  rem(20px);
       background:#fff;  
       .d-title{
-         padding:rem(15px) 0;
+         padding:rem(20px) 0 rem(15px) 0;
          h3{
-             font-size:16px;
+             font-size:18px;
              border-left:3px solid #55acef;
              padding-left:10px;
              color:#8d969b;
@@ -120,8 +120,8 @@ export default {
         flex-wrap:wrap;
 
         li{
-         width:50%;
-          margin:rem(30px) 0;
+          width:50%;
+          margin:rem(20px) 0;
           font-size:16px;
           .name{
              color:#8d969b;
@@ -132,6 +132,7 @@ export default {
         }
       }
       .img-list{
+        margin-top:rem(20px);
         img{
           width:100%;
         }

@@ -1,13 +1,13 @@
 <template>
   <div class="tabContentitem">
-       <div class="d-text" v-for="(v,index)">
+       <div class="d-text" v-for="(v,index) in data">
          <div class="d-title">
-              <h3>产品种源信息</h3>
+              <h3>{{v.name}}</h3>
           </div>   
           <ul class="d-list">
-               <li>
-                  <span class="name">批次号:</span>
-                  <span class="value">2588741255</span>
+               <li v-for="(sv,sinde) in v.list">
+                  <span class="name">{{sv.name}}:</span>
+                  <span class="value">{{sv.value}}</span>
                </li> 
            
           </ul>
@@ -35,7 +35,49 @@ export default {
                   {name:'种源购买日期',value:'12554'},
                    {name:'备注',value:'备注'}
                 
-           ]}
+           ]},
+            {name:"病虫草害防治信息",list:[
+               {name:'病虫草害名称',value:'12554'},
+               {name:'发生时间',value:'12554'},
+               {name:'防治方式',value:'12554'},
+               {name:'防治措施',value:'12554'},
+                {name:'是否使用化学产品',value:'12554'},
+                {name:'备注',value:'12554'},
+         ]},
+            {name:"产品防疫情况",list:[
+               {name:'每次剂量',value:'12554'},
+               {name:'防疫日期',value:'12554'},
+               {name:'负责人',value:'12554'},
+               {name:'防疫效果',value:'12554'},
+                {name:'备注',value:'12554'}
+            
+                
+           ]}, {name:"产品施肥情况",list:[
+               {name:'化肥种类',value:'12554'},
+               {name:'施肥时间',value:'12554'},
+               {name:'施肥作物',value:'12554'},
+               {name:'施肥量',value:'12554'},
+                {name:'施肥人',value:'12554'},
+                {name:'备注',value:'12554'}
+            
+           
+           ]},
+            {name:"产品收获信息",list:[
+               {name:'收获时间',value:'12554'},
+               {name:'收获方式',value:'12554'},
+               {name:'收获总量',value:'12554'},
+               {name:'收获批次设置',value:'12554'},
+                {name:'优选等级',value:'12554'},
+                {name:'备注',value:'12554'}
+                
+                
+           ]},
+            {name:"产品检测信息",list:[
+               {name:'检测日期',value:'12554'},
+               {name:'检测方式',value:'12554'},
+               {name:'检测项目',value:'12554'},
+               {name:'测试结果',value:'12554'}
+            ]}
        ]
     }
   }
