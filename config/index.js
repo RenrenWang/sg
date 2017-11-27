@@ -10,10 +10,21 @@ module.exports = {
     // Paths
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
-    proxyTable: {},
+    proxyTable:  {
+      "/FSH/":{
+
+      target: 'http://120.26.85.17', // target host
+       changeOrigin: true,               // needed for virtual hosted sites
+       ws: true,                         // proxy websockets
+       pathRewrite: {
+           '^/' : '',     // rewrite path
+                   // remove base path
+       }
+     }
+    },
 
     // Various Dev Server settings
-    host: '192.168.2.111', // can be overwritten by process.env.HOST
+    host: '192.168.0.2', // can be overwritten by process.env.HOST
     port: 8080, // can be overwritten by process.env.PORT, if port is in use, a free one will be determined
     autoOpenBrowser: false,
     errorOverlay: true,
